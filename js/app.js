@@ -20,7 +20,7 @@ function numbGenerator(){
           calls.push(generator);
         }
       }
-    return calls;
+      return calls;
 }
 function objMaker(){
     for( let i=0;i<img.length;i++){
