@@ -22,7 +22,11 @@ Esta es una página web donde se podrá votar por 1 de 3 productos mostrados, do
 
 + Punción lab 11:
 
-<img alt="Lab11" src="/img/Lab11.PNG">
+<img alt="Lab11" src="/img/Lab11.png">
+
++ Punción lab 12:
+
+<img alt="Lab12" src="/img/Lab12.PNG">
 
 ### Licencia 
 

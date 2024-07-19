@@ -84,7 +84,7 @@ function handleClick() {
       state.totalProducts[index].renderVotes();
       objRender();
       clean();
-      
+      renderChart();
       }
     });
   } 
@@ -107,29 +107,21 @@ function renderChart(){
           labels:productNames,
           datasets:[
               {
-                  label: '# de votos',
+                  label: '# Of Votes',
                   data:selectedProducts,
                   backgroundColor:[
                       'rgba(255, 99, 132, 0.2)',
-                      'rgba(54, 162, 235, 0.2)',
-                      'rgba(255, 206, 86, 0.2)',
-                      'rgba(75, 192, 192, 0.2)',
-                      'rgba(153, 102, 255, 0.2)',
                   ],
                   borderColor:['rgba(255, 99, 132, 1)',
-                              'rgba(54, 162, 235, 1)',
-                              'rgba(255, 206, 86, 1)',
-                              'rgba(75, 192, 192, 1)',
-                              'rgba(153, 102, 255, 1)',
                           ],
                   borderWidth:1
               },
               {
-                  label:'# de visualizaciones',
+                  label:'# Of Views',
                   data:productViews,
                   backgroundColor:[
-                      'rgba(255, 99, 132, 0.2)'],
-                  borderColor:['rgba(255, 99, 132, 1)'],
+                      'rgba(127, 255, 212, 0.2)',],
+                  borderColor:['rgba(127, 255, 212, 1)',],
                   borderWidth:1
               },
           ],
