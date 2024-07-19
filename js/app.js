@@ -1,6 +1,9 @@
 'use strict';
 let maxAttempts = 25;
+
 let chart = null;
+
+
 const img = ['bag','banana','bathroom','boots','breakfast','bubblegum','chair','cthulhu','dog-duck','dragon','pen','pet-sweep','scissors','shark','sweep','tauntaun','unicorn','water-can','wine-glass'];
 
 const state={
@@ -28,6 +31,25 @@ class Products {
     }
   }
 };
+
+
+function saveToLocalStorage() {
+  const products = JSON.stringify(state.totalProducts);
+  localStorage.setItem('products', products);
+}
+
+function loadFromLocalStorage() {
+  const savedProducts = localStorage.getItem('products');
+  if (savedProducts) {
+    const parsedProducts = JSON.parse(savedProducts);
+    parsedProducts.forEach(product => {
+      state.totalProducts.push(new Products(product.name, product.route, product.vote, product.views));
+    });
+  } else {
+    objMaker();
+  }
+}
+
 function objMaker(){
   for( let i=0;i<img.length;i++){
     let product= new Products(img[i],`./img/${img[i]}.jpg`);
@@ -82,6 +104,7 @@ function handleClick() {
       const index = img.indexOf(imgName)
       state.totalProducts[index].vote++
       state.totalProducts[index].renderVotes();
+      saveToLocalStorage();
       objRender();
       clean();
       renderChart();
@@ -143,9 +166,8 @@ function renderChart(){
       }
   });
 }
-
+loadFromLocalStorage();
 objMaker();
 objRender();    
 renderChart();
 handleClick();
-
