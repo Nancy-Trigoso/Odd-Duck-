@@ -167,7 +167,7 @@ function renderChart(){
   });
 }
 loadFromLocalStorage();
-objMaker();
+
 objRender();    
 renderChart();
 handleClick();
