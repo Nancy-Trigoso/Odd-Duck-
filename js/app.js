@@ -133,7 +133,7 @@ function renderChart(){
                   label: '# Of Votes',
                   data:selectedProducts,
                   backgroundColor:[
-                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(255, 99, 132, 0.5)',
                   ],
                   borderColor:['rgba(255, 99, 132, 1)',
                           ],
@@ -143,27 +143,13 @@ function renderChart(){
                   label:'# Of Views',
                   data:productViews,
                   backgroundColor:[
-                      'rgba(127, 255, 212, 0.2)',],
-                  borderColor:['rgba(127, 255, 212, 1)',],
+                      'rgba(0, 255, 0, 0.5)',],
+                  borderColor:['rgba(0, 255, 0, 1)',],
                   borderWidth:1
               },
           ],
       },
-      options: {
-          legend: {
-            display: false,
-          },
-          scales: {
-            xAxes: [{
-              ticks: {
-                stepSize: 1,
-              },
-              gridLines: {
-                display: false,
-              },
-            }]
-          }
-      }
+      
   });
 }
 loadFromLocalStorage();

@@ -32,6 +32,11 @@ Esta es una página web donde se podrá votar por 1 de 3 productos mostrados, do
 
 <img alt="Lab13" src="/img/Lab13.PNG">
 
++ Punción lab 15:
+
+<img alt="Lab15" src="/img/Lab15.PNG">
+
+
 ### Licencia 
 
 * MIT License
